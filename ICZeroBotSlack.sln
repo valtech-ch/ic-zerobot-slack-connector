@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICZeroBotSlack.Service", "ICZeroBotSlack.Service\ICZeroBotSlack.Service.csproj", "{0D230D24-9E3C-455C-936C-40E2D35440D7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2B287028-FB7E-41E0-BC2E-4DC10D6C96D0} = {2B287028-FB7E-41E0-BC2E-4DC10D6C96D0}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICZeroBotSlack.Logic", "ICZeroBotSlack.Logic\ICZeroBotSlack.Logic.csproj", "{656C59D1-CBE8-4A55-881A-0845D2D691FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlackBot", "SlackBot\SlackBot.csproj", "{1C8DACEF-74F1-45D2-AC76-B65DFB3DBCA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICZeroBotSlack.Cmd", "ICZeroBotSlack.Cmd\ICZeroBotSlack.Cmd.csproj", "{ED34A10D-D5E8-4720-9452-411517D1D8E6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2B287028-FB7E-41E0-BC2E-4DC10D6C96D0} = {2B287028-FB7E-41E0-BC2E-4DC10D6C96D0}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICZeroBotSlack", "ICZeroBotSlack\ICZeroBotSlack.csproj", "{2B287028-FB7E-41E0-BC2E-4DC10D6C96D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D230D24-9E3C-455C-936C-40E2D35440D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D230D24-9E3C-455C-936C-40E2D35440D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D230D24-9E3C-455C-936C-40E2D35440D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D230D24-9E3C-455C-936C-40E2D35440D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{656C59D1-CBE8-4A55-881A-0845D2D691FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{656C59D1-CBE8-4A55-881A-0845D2D691FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{656C59D1-CBE8-4A55-881A-0845D2D691FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{656C59D1-CBE8-4A55-881A-0845D2D691FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C8DACEF-74F1-45D2-AC76-B65DFB3DBCA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C8DACEF-74F1-45D2-AC76-B65DFB3DBCA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C8DACEF-74F1-45D2-AC76-B65DFB3DBCA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C8DACEF-74F1-45D2-AC76-B65DFB3DBCA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED34A10D-D5E8-4720-9452-411517D1D8E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED34A10D-D5E8-4720-9452-411517D1D8E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED34A10D-D5E8-4720-9452-411517D1D8E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED34A10D-D5E8-4720-9452-411517D1D8E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B287028-FB7E-41E0-BC2E-4DC10D6C96D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B287028-FB7E-41E0-BC2E-4DC10D6C96D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B287028-FB7E-41E0-BC2E-4DC10D6C96D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B287028-FB7E-41E0-BC2E-4DC10D6C96D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6433463-38FD-4698-A84F-E9CB1D3B624F}
+	EndGlobalSection
+EndGlobal
