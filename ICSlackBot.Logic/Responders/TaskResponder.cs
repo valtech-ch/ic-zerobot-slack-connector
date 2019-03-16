@@ -77,16 +77,14 @@ namespace ICSlackBot.Logic.Responders
 
             List<byte[]> atta = new List<byte[]>();
 
-            dynamic d = JObject.Parse(msg.RawData);
-
-            if (d.files != null && d.files.Count > 0)
+            if (msg.Files.Any())
             {
                 var webClient = new WebClient();
                 webClient.Headers.Add("Authorization", $"Bearer #{this._botController.cfg.Get("Slack", "ApiToken", "xxx")}");
 
-                foreach (dynamic f in d.files)
+                foreach (SlackFile f in msg.Files)
                 {
-                    byte[] img = webClient.DownloadData(f.url_private.ToString());
+                    byte[] img = webClient.DownloadData(f.Url_private);
                     atta.Add(img);
                 }
             }

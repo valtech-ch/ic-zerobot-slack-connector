@@ -372,25 +372,26 @@ namespace SlackBot
             {
                 string channelID = jObject["channel"].Value<string>();
 
-                    SlackMessage message = new SlackMessage()
-                    {
-                        ChatHub = null,
-                        RawData = json,
-                        Attachments = new List<SlackAttachment>()
-                    };
+                SlackMessage message = new SlackMessage()
+                {
+                    ChatHub = null,
+                    RawData = json,
+                    Attachments = new List<SlackAttachment>(),
+                    Files = new List<SlackFile>()
+                };
 
-                    if (ConnectedHubs.ContainsKey(channelID))
-                    {
-                        message.ChatHub = ConnectedHubs[channelID];
-                    }
-                    else
-                    {
-                        message.ChatHub = SlackChatHub.FromID(channelID);
-                        List<SlackChatHub> hubs = new List<SlackChatHub>();
-                        hubs.AddRange(ConnectedHubs.Values);
-                        hubs.Add(message.ChatHub);
-                    }
-
+                if (ConnectedHubs.ContainsKey(channelID))
+                {
+                    message.ChatHub = ConnectedHubs[channelID];
+                }
+                else
+                {
+                    message.ChatHub = SlackChatHub.FromID(channelID);
+                    List<SlackChatHub> hubs = new List<SlackChatHub>();
+                    hubs.AddRange(ConnectedHubs.Values);
+                    hubs.Add(message.ChatHub);
+                }
+            
                 try
                 {
                     message.Text = (jObject["text"] != null ? jObject["text"].Value<string>() : string.Empty);
@@ -442,6 +443,25 @@ namespace SlackBot
 
                         message.Text += string.Join(Environment.NewLine, msg);
                     }
+
+                    if (jObject["files"] != null)
+                    {
+                        foreach (JObject file in jObject["files"])
+                        {
+                            message.Files.Add(new SlackFile()
+                            {
+                                Id = file["id"]?.Value<string>() ?? string.Empty,
+                                Name = file["name"]?.Value<string>() ?? string.Empty,
+                                Title = file["title"]?.Value<string>() ?? string.Empty,
+                                Filetype = file["filetype"]?.Value<string>() ?? string.Empty,
+                                Mimetype = file["mimetype"]?.Value<string>() ?? string.Empty,
+                                Size = file["size"]?.Value<int>() ?? 0,
+                                Permalink = file["permalink"]?.Value<string>() ?? string.Empty,
+                                Url_private = file["url_private"]?.Value<string>() ?? string.Empty
+                            });
+                        }
+                    }
+
 
                     // check to see if bot has been mentioned
                     if (message.Text != null && 
