@@ -1,6 +1,7 @@
 ﻿using System;
 using log4net;
 using ICZeroBotSlack.Logic.Controllers;
+using ICSlackBot.API;
 
 /// <summary>
 /// Main Namespace
@@ -14,6 +15,7 @@ namespace ICZeroBotSlack
     {
         private static readonly ILog _logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private SlackBotController _slackBot = null;
+        private ApiBase _api = null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MainProgram"/> class.
@@ -32,7 +34,9 @@ namespace ICZeroBotSlack
                 _logger.Info("Config loaded, starting modules");
                 _slackBot = new SlackBotController(cfg);
                 _slackBot.InitBot();
-                
+
+                _api = new ApiBase(new Uri(cfg.Get("API", "Host", "http://localhost:50231/")));
+
                 _slackBot.onMessageReceived += _slackBot_onMessageReceived;
                 _logger.Info("Ready");
             }
@@ -60,7 +64,10 @@ namespace ICZeroBotSlack
         public void Shutdown()
         {
             _logger.Info("Stoping application");
-
+            if (_api != null)
+            {
+                _api.Stop();
+            }
             if (_slackBot != null)
             {
                 _slackBot.Shutdown();

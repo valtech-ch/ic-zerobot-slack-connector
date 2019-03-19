@@ -7,8 +7,8 @@
     <ProjectGuid>{8AEC1264-7E18-4A1E-9749-D01E5E934834}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ICSlackBot.API</RootNamespace>
-    <AssemblyName>ICSlackBot.API</AssemblyName>
+    <RootNamespace>ICZeroBotSlack.API</RootNamespace>
+    <AssemblyName>ICZeroBotSlack.API</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -64,12 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiBase.cs" />
-    <Compile Include="Data.cs" />
-    <Compile Include="Controller\MessageController.cs" />
     <Compile Include="Controller\TestController.cs" />
-    <Compile Include="FilterIPAttribute.cs" />
-    <Compile Include="IPHelper.cs" />
-    <Compile Include="IPList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

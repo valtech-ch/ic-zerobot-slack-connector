@@ -49,6 +49,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ICZeroBotSlack.API\ICZeroBotSlack.API.csproj">
+      <Project>{8aec1264-7e18-4a1e-9749-d01e5e934834}</Project>
+      <Name>ICZeroBotSlack.API</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ICZeroBotSlack.Logic\ICZeroBotSlack.Logic.csproj">
       <Project>{656C59D1-CBE8-4A55-881A-0845D2D691FB}</Project>
       <Name>ICZeroBotSlack.Logic</Name>

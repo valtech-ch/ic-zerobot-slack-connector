@@ -89,7 +89,10 @@ namespace ICZeroBotSlack.Logic.Helpers
                 rets.Add((string)row[2]);
             }
 
-            return string.Join(";", rets);
+            if (rets.Any())
+                return string.Join(";", rets);
+
+            return DefaultValue;
         }
 
         /// <summary>

@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICZeroBotSlack.Cmd", "ICZer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICZeroBotSlack", "ICZeroBotSlack\ICZeroBotSlack.csproj", "{2B287028-FB7E-41E0-BC2E-4DC10D6C96D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICZeroBotSlack.API", "ICZeroBotSlack.API\ICZeroBotSlack.API.csproj", "{8AEC1264-7E18-4A1E-9749-D01E5E934834}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{2B287028-FB7E-41E0-BC2E-4DC10D6C96D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B287028-FB7E-41E0-BC2E-4DC10D6C96D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B287028-FB7E-41E0-BC2E-4DC10D6C96D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AEC1264-7E18-4A1E-9749-D01E5E934834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AEC1264-7E18-4A1E-9749-D01E5E934834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AEC1264-7E18-4A1E-9749-D01E5E934834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AEC1264-7E18-4A1E-9749-D01E5E934834}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
